@@ -1,0 +1,67 @@
+.container {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    background: transparent;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 200, 255, 0.4);
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px #00c8ff;
+  }
+  
+  .dateInputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  :global(input[type="date"]) {
+    padding: 8px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid #00c8ff;
+    border-radius: 5px;
+  }
+  
+  .button {
+    background: #00c8ff;
+    border: none;
+    padding: 8px 15px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background: #fff;
+    color: #000;
+  }
+  
+  .error {
+    color: red;
+    font-size: 1rem;
+  }
+  
+  .spinner {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  .hazardous {
+    background: rgba(255, 0, 0, 0.4);
+    font-weight: bold;
+  }
+  

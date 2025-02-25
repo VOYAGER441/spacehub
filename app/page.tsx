@@ -2,6 +2,7 @@
 import Spline from "@splinetool/react-spline/next";
 import styles from './page.module.css';
 import Link from "next/link";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Home() {
   return (

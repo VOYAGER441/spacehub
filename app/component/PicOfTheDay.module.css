@@ -1,0 +1,58 @@
+/* Overlay to darken the background for better readability */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 80%;
+    height: 80%; */
+    /* background: rgba(0, 0, 0, 0.4); */
+    z-index: 1;
+  }
+  
+  .main {
+    position: relative;
+    z-index: 2; /* Ensures content appears above the overlay */
+    /* height: 100%; */
+    background-color: rgba(1, 1, 1, 0.397); /* More solid background for text contrast */
+    padding: 2rem;
+    border-radius: 20px;
+    margin: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease,  opacity 0.3s ease-out;
+    padding: 100px;
+  }
+  
+  .main:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .topic {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Enhanced button styling */
+  .button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 2rem;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Improved typography for lead text */
+  .lead {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
