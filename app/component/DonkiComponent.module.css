@@ -1,11 +1,11 @@
 /* Space Theme Styles */
-body {
+/* body {
     font-family: 'Arial', sans-serif;
     background-color: #0b0c10;
     color: #c5c6c7;
     margin: 0;
     padding: 0;
-}
+} */
 
 /* Container */
 .donkiContainer {
@@ -16,6 +16,8 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5);
     text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #c5c6c7;
 }
 
 /* Heading */
