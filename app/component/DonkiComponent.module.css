@@ -1,0 +1,150 @@
+/* Space Theme Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.donkiContainer {
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5);
+    text-align: center;
+}
+
+/* Heading */
+.heading {
+    color: #66fcf1;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Label Styles */
+.label {
+    display: block;
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+/* Select Dropdown */
+.select, .input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    background-color: #1f2833;
+    color: #48b0a9;
+    border: 1px solid #45a29e;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.select:hover, .input:hover {
+    border-color: #98d2ce;
+}
+
+/* Button */
+.button {
+    width: 95%;
+    padding: 12px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0b0c10;
+    background-color: #66fcf1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #45a29e;
+    color: #fff;
+}
+
+/* Error Message */
+.error {
+    color: #ff6363;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Results */
+.results {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(64, 178, 178, 0.589);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.3);
+}
+
+.results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.results li {
+    background: rgba(0, 255, 255, 0.2);
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.results {
+    margin-top: 20px;
+    padding: 10px;
+    background: transparent;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.3);
+}
+
+.resultCard {
+    background: rgba(20, 20, 30, 0.201);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+}
+
+.resultCard h4 {
+    color: #66fcf1;
+    margin-bottom: 5px;
+}
+
+.resultCard p {
+    margin: 5px 0;
+}
+
+.resultCard a {
+    color: #45a29e;
+    text-decoration: none;
+}
+
+.resultCard a:hover {
+    text-decoration: underline;
+}
+
+.cmeAnalysis {
+    background: rgba(0, 255, 255, 0.1);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.impactDetails {
+    background: rgba(0, 255, 255, 0.15);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}

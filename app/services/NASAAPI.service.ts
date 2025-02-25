@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import axios from "axios";
 import * as Interface from "@/app/interface/NASAData.interface";
@@ -40,5 +41,12 @@ async function getASONews(startDate: string, endDate: string) {
   }
 }
 
+ const fetchDonkiData = async (apiType: any, { startDate, endDate }: any) => {
+  const baseUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/DONKI/${apiType}`;
+  const url = `${baseUrl}?startDate=${startDate}&endDate=${endDate}&api_key=${process.env.NEXT_PUBLIC_NASA_API_KEY}`;
 
-export default{ getPicOfTheDay, getASONews };
+  const response = await axios.get(url);
+  return response.data;
+};
+
+export default{ getPicOfTheDay, getASONews ,fetchDonkiData};

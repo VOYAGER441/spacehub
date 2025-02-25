@@ -55,7 +55,7 @@ const ASONews = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>🌠 Asteroid Tracker</h1>
+      <h1 className={styles.title}>Asteroid Tracker</h1>
 
       {/* Date Inputs */}
       <div className={styles.dateInputs}>

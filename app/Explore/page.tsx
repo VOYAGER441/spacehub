@@ -4,6 +4,7 @@ import VantaWaves from "../component/VantaWaves";
 import AstronomyPictureOfTheDay from "../component/PicOfTheDay";
 import SpaceNavbar from "../component/SpaceNavbar";
 import ASONews from "../component/ASONews";
+import DonkiComponent from "../component/DonkiComponent";
 
 function Page() {
   return (
@@ -23,6 +24,7 @@ function Page() {
             Other Application
           </h1>
           <ASONews/>
+          <DonkiComponent/>
         </div>
       </div>
     </div>
