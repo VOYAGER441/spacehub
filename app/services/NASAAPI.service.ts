@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import axios from "axios";
@@ -41,12 +42,36 @@ async function getASONews(startDate: string, endDate: string) {
   }
 }
 
- const fetchDonkiData = async (apiType: any, { startDate, endDate }: any) => {
-  const baseUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/DONKI/${apiType}`;
-  const url = `${baseUrl}?startDate=${startDate}&endDate=${endDate}&api_key=${process.env.NEXT_PUBLIC_NASA_API_KEY}`;
+const fetchDonkiData = async (apiType: any, { startDate, endDate }: any) => {
+  try {
+    const baseUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/DONKI/${apiType}`;
+    const url = `${baseUrl}?startDate=${startDate}&endDate=${endDate}&api_key=${process.env.NEXT_PUBLIC_NASA_API_KEY}`;
 
-  const response = await axios.get(url);
-  return response.data;
+    const response = await axios.get(url);
+    if (!response.data) {
+      throw new Error("⚠️ Data set is empty.");
+    }
+
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching NASA data:", error);
+    throw new Error("❌ Server error.");
+  }
 };
 
-export default{ getPicOfTheDay, getASONews ,fetchDonkiData};
+async function getEpic() {
+  try {
+    const baseUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/EPIC/api/natural/images`;
+    const url = `${baseUrl}?api_key=${process.env.NEXT_PUBLIC_NASA_API_KEY}`;
+    const response = await axios.get(url);
+    if (!response.data) {
+      throw new Error("⚠️ Data set is empty.");
+    }
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching NASA data:", error);
+    throw new Error("❌ Server error.");
+  }
+}
+
+export default { getPicOfTheDay, getASONews, fetchDonkiData, getEpic };

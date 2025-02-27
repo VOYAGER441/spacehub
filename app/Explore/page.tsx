@@ -5,6 +5,7 @@ import AstronomyPictureOfTheDay from "../component/PicOfTheDay";
 import SpaceNavbar from "../component/SpaceNavbar";
 import ASONews from "../component/ASONews";
 import DonkiComponent from "../component/DonkiComponent";
+import EpicList from '../component/EpicList';
 
 function Page() {
   return (
@@ -25,6 +26,7 @@ function Page() {
           </h1>
           <ASONews/>
           <DonkiComponent/>
+          <EpicList/>
         </div>
       </div>
     </div>
