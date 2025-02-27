@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Image from "next/image";
+import styles from "./EpicImage.module.css";
 
 const EpicImage = ({
   image,
@@ -17,12 +19,20 @@ const EpicImage = ({
     .join("/")}/png/${image}.png?api_key=${
     process.env.NEXT_PUBLIC_NASA_API_KEY
   }`;
+
   return (
-    <div className="card text-white bg-dark">
-      <img src={imageUrl} alt={caption} className="card-img-top" />
-      <div className="card-body text-center">
-        <h5 className="card-title">{caption}</h5>
-        <p className="card-text">{date}</p>
+    <div className={styles.epicCard}>
+      <Image
+        src={imageUrl}
+        alt={caption}
+        width={500}
+        height={500}
+        className={styles.epicImage}
+        priority
+      />
+      <div className={styles.epicCardBody}>
+        <h5>{caption}</h5>
+        <p>{date}</p>
       </div>
     </div>
   );
