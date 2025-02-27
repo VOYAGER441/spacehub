@@ -9,7 +9,7 @@ import EpicList from '../component/EpicList';
 
 function Page() {
   return (
-    <div className="container" style={{ width: "100vw", height: "100vh" }}>
+    <div className="container " style={{ width: "100vw", height: "100vh" }}>
       <VantaWaves />
       <div
         style={{

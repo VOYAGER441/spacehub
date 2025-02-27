@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { Navbar, Nav, Container, Button, Form } from "react-bootstrap";
+import { Navbar, Nav, Container, /* Button, Form */ } from "react-bootstrap";
 import styles from "./SpaceNavbar.module.css"; // Custom styling
 
 const SpaceNavbar = () => {
@@ -13,11 +15,14 @@ const SpaceNavbar = () => {
       expand="lg"
       className={styles.navbar}
       variant="dark"
+      id="top"
     >
       <Container>
         {/* Logo / Brand */}
-        <Navbar.Brand href="#" className={styles.brand}>
-          🚀 SpaceHub
+        <Navbar.Brand href="/" className={styles.brand}>
+          <div className={styles.logo}>
+            <img src="/logo.png" style={{ width: "100px", height: "50px" }} />
+          </div>
         </Navbar.Brand>
 
         {/* Navbar Toggler */}
@@ -30,14 +35,14 @@ const SpaceNavbar = () => {
         {/* Navbar Links */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} href="/" className={styles.navlink}>
+            <Nav.Link as={Link} href="/Explore" className={styles.navlink}>
               Home
+            </Nav.Link>
+            <Nav.Link as={Link} href="/Mars" className={styles.navlink}>
+              Mars
             </Nav.Link>
             <Nav.Link as={Link} href="/gallery" className={styles.navlink}>
               Gallery
-            </Nav.Link>
-            <Nav.Link as={Link} href="/missions" className={styles.navlink}>
-              Missions
             </Nav.Link>
             <Nav.Link as={Link} href="/news" className={styles.navlink}>
               News
@@ -45,7 +50,7 @@ const SpaceNavbar = () => {
           </Nav>
 
           {/* Search Form */}
-          <Form className="d-flex">
+          {/* <Form className="d-flex">
             <Form.Control
               type="search"
               placeholder="Search..."
@@ -54,7 +59,7 @@ const SpaceNavbar = () => {
             <Button variant="outline-light" className={styles.searchButton}>
               🔍
             </Button>
-          </Form>
+          </Form> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -74,4 +74,20 @@ async function getEpic() {
   }
 }
 
-export default { getPicOfTheDay, getASONews, fetchDonkiData, getEpic };
+async function getMarsWeather() {
+  try {
+    const url = `${process.env.NEXT_PUBLIC_BASE_URL}/insight_weather/?api_key=${process.env.NEXT_PUBLIC_NASA_API_KEY}&feedtype=json&ver=1.0`;
+    console.log(url);
+    
+    const response = await axios.get(url);
+    if (!response.data) {
+      throw new Error("⚠️ Data set is empty.");
+    }
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching NASA data:", error);
+    throw new Error("❌ Server error.");
+  }
+}
+
+export default { getPicOfTheDay, getASONews, fetchDonkiData, getEpic,getMarsWeather };

@@ -1,76 +1,86 @@
 .navbar {
-    background:transparent; /* Dark blue space theme */
-    /* backdrop-filter: blur(10px); */
-    /* border-bottom: 2px solid rgba(0, 200, 255, 0.6); */
-    /* box-shadow: 0 0 10px rgba(0, 200, 255, 0.3); */
-    transition: all 0.3s ease-in-out;
-    width: 100%;
-    /* position: fixed;
+  background: transparent;
+  /* Dark blue space theme */
+  /* backdrop-filter: blur(10px); */
+  /* border-bottom: 2px solid rgba(0, 200, 255, 0.6); */
+  /* box-shadow: 0 0 10px rgba(0, 200, 255, 0.3); */
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  /* position: fixed;
     padding-bottom: 50px;
   } */
 }
-  .brand {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #00c8ff !important;
-    text-shadow: 0 0 10px #00c8ff;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .brand:hover {
-    color: #fff !important;
-    text-shadow: 0 0 20px #00c8ff;
-  }
-  
-  .navlink {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.8) !important;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-  }
-  
-  .navlink::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 0%;
-    background: #00c8ff;
-    transition: width 0.3s;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .navlink:hover {
-    color: #fff !important;
-  }
-  
-  .navlink:hover::after {
-    width: 100%;
-  }
-  
-  .searchInput {
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    border: 1px solid rgba(0, 200, 255, 0.6);
-    box-shadow: 0 0 10px rgba(0, 200, 255, 0.3);
-  }
-  
-  .searchInput:focus {
-    border-color: #00c8ff;
-    box-shadow: 0 0 15px rgba(0, 200, 255, 0.5);
-  }
-  
-  .searchButton {
-    border-color: #00c8ff;
-    color: #00c8ff;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .searchButton:hover {
-    background: #00c8ff;
-    color: #000;
-  }
-  
+
+.brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00c8ff !important;
+  text-shadow: 0 0 10px #00c8ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.brand:hover {
+  color: #fff !important;
+  text-shadow: 0 0 20px #00c8ff;
+}
+.logo {
+  transition: all 0.3s ease-in-out;
+}
+
+.logo:hover {
+  filter: brightness(2.9); /* Example effect: increase brightness */
+  /* transform: scale(1.); Example effect: scale up slightly */
+}
+
+
+.navlink {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.navlink::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #00c8ff;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navlink:hover {
+  color: #fff !important;
+}
+
+.navlink:hover::after {
+  width: 100%;
+}
+
+.searchInput {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 1px solid rgba(0, 200, 255, 0.6);
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.3);
+}
+
+.searchInput:focus {
+  border-color: #00c8ff;
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.5);
+}
+
+.searchButton {
+  border-color: #00c8ff;
+  color: #00c8ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.searchButton:hover {
+  background: #00c8ff;
+  color: #000;
+}

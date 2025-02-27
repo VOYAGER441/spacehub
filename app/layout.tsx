@@ -7,7 +7,8 @@ import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import 'bootstrap/dist/css/bootstrap.min.css';
+// import AppNav from '@/app/component';
+import AppUpArrowKey from "./component/AppUpArrowKey";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +38,7 @@ export default function RootLayout({
           integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
           crossOrigin="anonymous"
         />
-
+           <AppUpArrowKey/>
         {children}
       </body>
     </html>
