@@ -78,3 +78,18 @@ export interface IMarsPhoto {
   earth_date: string;
   rover: Rover;
 }
+
+export interface INasaSearchResultItem {
+  href: string;
+  data: {
+    title: string;
+    description: string;
+    media_type: string;
+    nasa_id: string;
+  }[];
+  links?: { href: string }[];
+}
+
+export interface IProps {
+  query: string;
+}

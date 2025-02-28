@@ -43,8 +43,6 @@ const MarsPhotos = () => {
                   <p>
                     
                       <strong>Earth Date:</strong> {photo.earth_date}
-                    
-
                     <a
                       href={photo.img_src}
                       target="_blank"

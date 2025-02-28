@@ -5,6 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Navbar, Nav, Container, /* Button, Form */ } from "react-bootstrap";
 import styles from "./SpaceNavbar.module.css"; // Custom styling
+// import SearchCom from "./SearchCom";
 
 const SpaceNavbar = () => {
   const [expanded, setExpanded] = useState(false);
@@ -41,8 +42,8 @@ const SpaceNavbar = () => {
             <Nav.Link as={Link} href="/Mars" className={styles.navlink}>
               Mars
             </Nav.Link>
-            <Nav.Link as={Link} href="/gallery" className={styles.navlink}>
-              Gallery
+            <Nav.Link as={Link} href="/Gallery" className={styles.navlink}>
+              Gallery & Search Engine
             </Nav.Link>
             <Nav.Link as={Link} href="/news" className={styles.navlink}>
               News
@@ -60,6 +61,7 @@ const SpaceNavbar = () => {
               🔍
             </Button>
           </Form> */}
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>
