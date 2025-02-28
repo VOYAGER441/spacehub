@@ -23,16 +23,13 @@ const MarsPhotos = () => {
   }, []);
 
   return (
-    <div
-      className="container text-center py-4"
-      style={{ color: "white" }}
-    >
+    <div className="container text-center py-4" style={{ color: "white" }}>
       <h1 className="mb-4">Mars Rover Photos</h1>
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {Array.isArray(photos) && photos.length > 0 ? (
           photos.map((photo) => (
             <div key={photo.id} className="col">
-              <div className="card bg-dark text-white shadow-lg">
+              <div className="card text-white shadow-lg" style={{backgroundColor:"#272727"}}>
                 <img
                   src={photo.img_src}
                   alt={photo.camera.full_name}
@@ -43,8 +40,19 @@ const MarsPhotos = () => {
                   <p className="card-text">
                     <strong>Rover:</strong> {photo.rover.name}
                   </p>
-                  <p className="card-text">
-                    <strong>Earth Date:</strong> {photo.earth_date}
+                  <p>
+                    
+                      <strong>Earth Date:</strong> {photo.earth_date}
+                    
+
+                    <a
+                      href={photo.img_src}
+                      target="_blank"
+                      type="button"
+                      className="mx-3 btn btn-danger"
+                    >
+                      View In HD
+                    </a>
                   </p>
                 </div>
               </div>
