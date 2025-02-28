@@ -1,4 +1,5 @@
 "use client";
+import MarsPhotos from "../component/MarsPhotos";
 import MarsWeather from "../component/MarsWeather";
 import SpaceNavbar from "../component/SpaceNavbar";
 import VantaWaves from "../component/VantaWaves";
@@ -17,6 +18,7 @@ function Page() {
         <div className={` `}>
           <SpaceNavbar />
          <MarsWeather/>
+         <MarsPhotos/>
         </div>
       </div>
     </div>

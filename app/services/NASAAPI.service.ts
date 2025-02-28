@@ -77,8 +77,8 @@ async function getEpic() {
 async function getMarsWeather() {
   try {
     const url = `${process.env.NEXT_PUBLIC_BASE_URL}/insight_weather/?api_key=${process.env.NEXT_PUBLIC_NASA_API_KEY}&feedtype=json&ver=1.0`;
-    console.log(url);
-    
+    // console.log(url);
+
     const response = await axios.get(url);
     if (!response.data) {
       throw new Error("⚠️ Data set is empty.");
@@ -90,4 +90,30 @@ async function getMarsWeather() {
   }
 }
 
-export default { getPicOfTheDay, getASONews, fetchDonkiData, getEpic,getMarsWeather };
+async function getMarsRoverPic(date: string) {
+  try {
+    const url = `${process.env.NEXT_PUBLIC_BASE_URL}/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=${process.env.NEXT_PUBLIC_NASA_API_KEY}`;
+    
+    
+    console.log(url);
+    
+
+    const response = await axios.get(url);
+    if (!response.data) {
+      throw new Error("⚠️ Data set is empty.");
+    }
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching NASA data:", error);
+    throw new Error("❌ Server error.");
+  }
+}
+
+export default {
+  getPicOfTheDay,
+  getASONews,
+  fetchDonkiData,
+  getEpic,
+  getMarsWeather,
+  getMarsRoverPic
+};
